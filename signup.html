@@ -27,58 +27,57 @@
         <div class="jumbotron my-4">
         <h1> Register Here</h1>
             <form>
+
                 <div class="form-group row">
-                    <label for="FirstName" class="col-sm-2 col-form-label">First Name</label>
+                    <label for="option" class="col-sm-2 col-form-label">Passenger or Driver?</label>
+                    <div class="col-auto">
+                        <select class="custom-select" id="preferenceId">
+                            <option selected></option>
+                            <option value="1">Passenger</option>
+                            <option value="2">Driver</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="firstNameInput" class="col-sm-2 col-form-label">First Name</label>
                     <div class="col-auto">
                         <input type="text" class="form-control" id="firstNameInput" placeholder="First Name">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="LastName" class="col-sm-2 col-form-label">Last Name</label>
+                    <label for="lastNameInput" class="col-sm-2 col-form-label">Last Name</label>
                     <div class="col-auto">
                         <input type="text" class="form-control" id="lastNameInput" placeholder="Last Name">
                     </div>
                 </div>
-                 <div class="form-group row">
-                    <label for="Email" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-auto">
-                        <input type="text" class="form-control" id="emailInput" placeholder="Email">
-                    </div>
-                </div>
-
                 <div class="form-group row">
-                    <label for="Mobile" class="col-sm-2 col-form-label">Mobile</label>
+                    <label for="mobileInput" class="col-sm-2 col-form-label">Mobile</label>
                     <div class="col-auto">
                         <input type="text" class="form-control" id="mobileInput" placeholder="Mobile including country code">
                     </div>
                 </div>
-
+                 <div class="form-group row">
+                    <label for="emailInput" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-auto">
+                        <input type="text" class="form-control" id="emailInput" placeholder="Email">
+                    </div>
+                </div>             
                 <div class="form-group row">
-                    <label for="InputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <label for="passwordInput" class="col-sm-2 col-form-label">Password</label>
                     <div class="col-auto">
                         <input type="password" class="form-control" id="passwordInput" placeholder="Password">
                     </div>
                 </div>
-
                 <div class="form-group row">
-                    <label for="ConfirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
+                    <label for="confirmPasswordInput" class="col-sm-2 col-form-label">Confirm Password</label>
                     <div class="col-auto">
                         <input type="password" class="form-control" id="confirmPasswordInput" placeholder="confirmPasswordInput">
                     </div>
                 </div>
 
 
-                <div class="form-group row">
-                <label for="option" class="col-sm-2 col-form-label">Preference</label>
-                <div class="col-auto">
-                <select class="custom-select" id="preferenceId">
-  <option selected></option>
-  <option value="1">Driver</option>
-  <option value="2">Passenger</option>
-  
-</select>
- </div>
- </div>
+                
 
                 <div class="form-group row">
                     <button type="button" class="btn btn-primary" id="saveupInfo">Submit</button>
@@ -91,12 +90,12 @@
 
 
 
-        if(preference == 1) {
+        if(preference == 2) {
             window.location = "driverProfile.html";
             return false;
         }
 
-        if(preference == 2) {
+        if(preference == 1) {
             window.location = "passengerProfile.html";
             return false;
         }
@@ -108,7 +107,7 @@
     
 
 
-   <script src= "./assets/js/driverSignup.js"> </script>
+   <script src= "./assets/js/signUp.js"> </script>
 
 </body>
 
